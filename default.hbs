@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="{{asset "built/base.css"}}" />
+
+    {{ghost_head}}
+
+</head>
+<body class="{{body_class}}">
+    
+    {{> header }}
+
+    <main>
+        {{!-- Main content injected here; e.g. index.hbs, post.hbs, etc. --}}
+        {{{body}}}
+    </main>
+
+    {{> footer }}
+
+    {{!-- The #block helper will pull in data from the #contentFor other template files. --}}
+    {{{block "scripts"}}}
+
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    {{ghost_foot}}
+
+</body>
+</html>
