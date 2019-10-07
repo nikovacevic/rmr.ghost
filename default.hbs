@@ -2,34 +2,82 @@
 <html>
 <head>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{{meta_title}}</title>
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/base.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/fa.min.css"}}" />
 
-    <link rel="stylesheet" type="text/css" href="{{asset "built/base.css"}}" />
+  <title>{{meta_title}}</title>
 
-    {{ghost_head}}
+  {{ghost_head}}
 
 </head>
 <body class="{{body_class}}">
-    
-    {{> header }}
 
-    <main>
-        {{!-- Main content injected here; e.g. index.hbs, post.hbs, etc. --}}
-        {{{body}}}
-    </main>
+  {{> header }}
 
-    {{> footer }}
+  <main class="container">
+    <h1>RMR</h1>
+    <p>Boulder-based running group.</p>
 
-    {{!-- The #block helper will pull in data from the #contentFor other template files. --}}
-    {{{block "scripts"}}}
+    <div class="card-group">
+      <div class="card card-large">
+        <div class="card-content">
+          <h4>This is a card</h4>
+          <p>It has some content, which you're reading right now!</p>
+        </div>
+        <div class="card-footer"></div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h4>This is a card</h4>
+          <p>It has some content, which you're reading right now!</p>
+          <p>It has some content, which you're reading right now!</p>
+          <p>It has some content, which you're reading right now!</p>
+        </div>
+        <div class="card-footer"></div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h4>This is a card</h4>
+          <p>It has some content, which you're reading right now!</p>
+        </div>
+        <div class="card-footer"></div>
+      </div>
+    </div>
 
-    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
-    {{ghost_foot}}
+    <h2>Rocky Mountain Runners</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit urna ut metus tincidunt fermentum. Nunc in purus vitae mauris ultrices semper. Integer consectetur, massa a sollicitudin tincidunt, ipsum ipsum accumsan velit, eget feugiat ex ante tempus massa. Ut consequat quis libero ac accumsan. Maecenas vel interdum lacus. Duis turpis quam, rutrum ac laoreet nec, pellentesque vitae urna. Nulla sit amet vulputate odio. Sed vehicula quam vel urna efficitur, et venenatis nisl pharetra. Quisque aliquam convallis nisl, eget accumsan nunc. Morbi non lorem metus. Fusce eget augue eros. Curabitur est mi, interdum sit amet quam a, laoreet elementum velit. Vivamus ac malesuada arcu, nec feugiat neque. Mauris dictum egestas ex a finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed nec nisl nunc.</p>
+    <p>Fusce eu quam feugiat, aliquet sem id, malesuada eros. Curabitur rutrum dapibus turpis, a viverra mi interdum non. Aenean semper tellus justo, eget varius lacus dignissim quis. Nulla vulputate metus at posuere elementum. Quisque ac maximus dui, nec varius risus. Cras non leo at sem imperdiet vestibulum eget eget arcu. Ut sed arcu non massa commodo tincidunt a pretium eros. Integer dignissim neque quam, eu mattis libero condimentum vel.</p>
+
+    <h3>This isn't training, this is living</h3>
+    <p>Etiam vehicula tempus turpis, quis maximus sapien mollis id. Ut at laoreet metus, id lobortis leo. Proin et ante nec dui pharetra aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan mauris ut arcu elementum egestas. Etiam vehicula felis augue, et elementum enim elementum eu. Integer quis suscipit velit. Morbi commodo risus leo, in vulputate dolor iaculis vel. Fusce in arcu vitae erat sagittis varius eget tristique erat. Donec viverra eleifend elit eget hendrerit. Maecenas elit dui, volutpat vel enim at, tempor imperdiet lacus.</p>
+
+    <h4>Recommended routes</h4>
+    <p>Fusce finibus felis a nulla fringilla, eget viverra dolor convallis. Nulla eu magna vitae orci ullamcorper eleifend. Nullam ultrices erat at sodales vestibulum. Donec auctor euismod dui eget pretium. Nunc dolor nunc, dictum vel eleifend eu, aliquet non nibh. Nulla in cursus tortor. Nunc sem mi, pretium non tristique venenatis, varius at sapien. Maecenas lobortis tincidunt erat interdum hendrerit. Maecenas in blandit dui. Praesent accumsan nibh id odio gravida, vel scelerisque sapien vehicula. Duis sagittis quis sapien vehicula tempus. Duis eu rhoncus dui.</p>
+
+    <h5>Front Range</h5>
+    <p>Integer a ligula non mauris cursus tempus sit amet sit amet libero. Pellentesque eget ante tellus. Donec id mollis ipsum. Curabitur lacus velit, blandit id diam dictum, fringilla tincidunt leo. Curabitur arcu orci, fringilla eget risus nec, dictum accumsan leo. Ut volutpat neque ut est laoreet molestie. Proin vel blandit tortor.</p>
+
+    <h6>Note: these are steep and hard</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit urna ut metus tincidunt fermentum. Nunc in purus vitae mauris ultrices semper. Integer consectetur, massa a sollicitudin tincidunt, ipsum ipsum accumsan velit, eget feugiat ex ante tempus massa. Ut consequat quis libero ac accumsan. Maecenas vel interdum lacus. Duis turpis quam, rutrum ac laoreet nec, pellentesque vitae urna. Nulla sit amet vulputate odio. Sed vehicula quam vel urna efficitur, et venenatis nisl pharetra. Quisque aliquam convallis nisl, eget accumsan nunc. Morbi non lorem metus. Fusce eget augue eros. Curabitur est mi, interdum sit amet quam a, laoreet elementum velit. Vivamus ac malesuada arcu, nec feugiat neque. Mauris dictum egestas ex a finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed nec nisl nunc.</p>
+    <p>Fusce eu quam feugiat, aliquet sem id, malesuada eros. Curabitur rutrum dapibus turpis, a viverra mi interdum non. Aenean semper tellus justo, eget varius lacus dignissim quis. Nulla vulputate metus at posuere elementum. Quisque ac maximus dui, nec varius risus. Cras non leo at sem imperdiet vestibulum eget eget arcu. Ut sed arcu non massa commodo tincidunt a pretium eros. Integer dignissim neque quam, eu mattis libero condimentum vel.</p>
+    {{!-- Main content injected here; e.g. index.hbs, post.hbs, etc. --}}
+    {{{body}}}
+  </main>
+
+  {{> footer }}
+
+  <script src="{{asset "js/rmr.js"}}"></script>
+
+  {{!-- The #block helper will pull in data from the #contentFor other template files. --}}
+  {{{block "scripts"}}}
+
+  {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+  {{ghost_foot}}
 
 </body>
 </html>
