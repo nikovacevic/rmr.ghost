@@ -1,0 +1,12 @@
+<div class="card {{#if large}}card-large{{/if}}">
+  {{#if feature_image}}
+    <div class="post-card-image" style="min-height: 200px; background-image: url({{feature_image}}); background-size: cover; border-radius: 3px 3px 0 0;"></div>
+  {{/if}}
+  <div class="card-content">
+    <h4 class="title">{{title}}</h4>
+    <p class="date">{{date format="MMMM D, YYYY"}}</p>
+  </div>
+  <div class="card-footer">
+    <a class="post-card-link" href="{{url}}">Read more</a>
+  </div>
+</div>

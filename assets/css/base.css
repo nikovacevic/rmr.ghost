@@ -1,5 +1,5 @@
 @import url('./reset.css');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed');
 
 /* Universal */
 
@@ -107,6 +107,12 @@ body>header {
   width: 100%;
 }
 
+body>header a#site-title {
+  font-family: "Roboto Condensed", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 nav#main-nav {
   background: rgb(256, 256, 256);
   color: rgb(32, 32, 32);
@@ -121,7 +127,7 @@ nav#main-nav {
 }
 
 nav#main-nav.open {
-  animation-timing-function: 1s ease-in;
+  animation-timing-function: 0.25s;
   box-shadow: -3px 0px 5px 0px rgba(0,0,0,0.2);
   transform: translate3d(-360px, 0, 0);
 }
@@ -170,6 +176,24 @@ body>main {
   margin-bottom: 60px;
 }
 
+body>main>header {
+  align-items: center;
+  background: rgb(48, 48, 48) no-repeat 50%;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex: 0 0 480px;
+  flex-flow: column;
+  justify-content: center;
+  min-height: 480px;
+  max-height: 1vh;
+}
+
+body>main>header img.header-logo {
+  width: 240px;
+  max-width: 80%;
+}
+
 body>footer {
   background: rgb(48, 48, 48);
   box-sizing: border-box;
@@ -194,6 +218,11 @@ body>footer h3 { font-size: 1.2em; }
 body>footer h4 { font-size: 1.1em; }
 body>footer h5 { font-size: 1.0em; }
 body>footer h6 { font-size: 1.0em; }
+
+body>footer a:hover,
+body>footer a:active {
+  box-shadow: inset 0 -0.15em 0 rgba(0, 175, 88, 0.9);
+}
 
 /* Utility */
 

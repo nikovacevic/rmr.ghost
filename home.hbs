@@ -1,21 +1,48 @@
 {{!< default}}
 {{!-- inject everything in this file into the {body} of default.hbs --}}
 
+{{#if @blog.cover_image}}
+  <header style="background-image: url({{@blog.cover_image}});">
+{{else}}
+  <header>
+{{/if}}
+  {{#if @site.logo}}
+    <img class="header-logo" src="{{@site.logo}}" />
+  {{else}}
+    <div>
+      <h2>{{@site.title}}</h2>
+      <p>{{@site.description}}</p>
+    </div>
+  {{/if}}
+</header>
 
-{{!-- about the club --}}
-<div class="">
-    {{!-- club photo (page primary photo) --}}
-    {{!-- about blurb (page content) --}}
-    {{!-- scheduled runs (page content) --}}
+<div class="container">
+  <h2>About</h2>
+  <p>Lorem ipsum...</p>
+
+  <h2>Blog</h2>
+  <div class="card-group posts">
+    {{#get "posts" limit="5"}}
+      {{#foreach posts}}
+        {{#if @first}}
+          {{> "post-card" large=true}}
+        {{else}}
+          {{> "post-card"}}
+        {{/if}}
+      {{/foreach}}
+    {{/get}}
+  </div>
+
+  <h2>Routes</h2>
+  <div class="card-group posts">
+    {{#get "posts" limit="5"}}
+      {{#foreach posts}}
+        {{#if @first}}
+          {{> "post-card" large=true}}
+        {{else}}
+          {{> "post-card"}}
+        {{/if}}
+      {{/foreach}}
+    {{/get}}
+  </div>
 </div>
-
-{{!-- featured routes --}}
-<div class="">
-    
-</div>
-
-{{!--  --}}
-<div class="">
-
-</div>
-

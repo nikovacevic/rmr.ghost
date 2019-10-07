@@ -3,11 +3,9 @@
     <nav id="footer">
       <h1>{{@site.title}}</h1>
       <p>{{@site.description}}</p>
-      <ul>
-        {{#if @blog.navigation}}
-          {{navigation}}
-        {{/if}}
-      </ul>
+      {{#if @blog.navigation}}
+        {{navigation}}
+      {{/if}}
     </nav>
   </div>
 </footer>
