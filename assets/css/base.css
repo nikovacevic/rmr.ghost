@@ -24,11 +24,13 @@ body {
   font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 p {
   color: rgb(16, 16, 16);
-  line-height: 1.4;
+  line-height: 1.6;
   margin: 0 0 1em 0;
 }
 
@@ -172,8 +174,8 @@ body>main {
   display: flex;
   flex: 1 0 auto;
   flex-flow: column;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 body>main>header {
@@ -226,7 +228,7 @@ body>footer a:active {
 
 /* Utility */
 
-.card {
+.card, .card:visited {
   background: rgb(256, 256, 256);
   border-radius: 3px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -234,6 +236,9 @@ body>footer a:active {
   flex-flow: column nowrap;
   flex: 1 1 300px;
   margin: 0.5em;
+}
+.card:hover, .card:active {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card.card-large {
@@ -264,6 +269,17 @@ body>footer a:active {
   margin-left: auto;
   max-width: 100%;
   width: 1200px;
+}
+
+.container img {
+  padding: 0 1.6em;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+}
+
+.container figure {
+  max-width: 100%;
 }
 
 .flex-grow {

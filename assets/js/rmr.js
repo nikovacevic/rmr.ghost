@@ -1,23 +1,29 @@
 (function(window, document) {
 
   var mainNav = document.querySelector('#main-nav');
-  console.log(mainNav);
-
   var mainNavToggles = document.querySelectorAll('.toggle-main-nav');
-  console.log(mainNavToggles);
 
   mainNavToggles.forEach(function (element) {
-    console.log(element);
-
     element.addEventListener('click', function() {
-      console.log('mainNavToggle click');
       toggleClass(mainNav, 'open');
     });
+  });
 
-    element.addEventListener('focusout', function() {
-      console.log('mainNavToggle focusout');
+  document.addEventListener('click', function(e) {
+    var closeMenu = true;
+
+    for (var el of e.path) {
+      if (el.id && el.id === 'main-nav') {
+        closeMenu = false;
+      }
+      if (el.className && el.className.indexOf('toggle-main-nav') > -1) {
+        closeMenu = false;
+      }
+    }
+
+    if (closeMenu) {
       removeClass(mainNav, 'open');
-    });
+    }
   });
 
   function toggleClass(element, className) {

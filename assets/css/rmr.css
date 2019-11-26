@@ -1,2 +1,83 @@
 @import url('./base.css');
 
+section.about {
+  padding: 2em;
+  text-align: center;
+}
+
+section.about p {
+  font-size: 1.2em;
+  margin: 0 auto;
+  max-width: 600px;
+}
+section.about p:last-child {
+  margin-bottom: 0;
+}
+
+/* Home */
+
+section.home header {
+  background: rgba(0, 175, 88, 0.75);
+  color: rgb(240, 240, 240);
+  margin: 1em 0;
+}
+section.home header p,
+section.home header a,
+section.home header h1,
+section.home header h2,
+section.home header h3,
+section.home header h4,
+section.home header h5,
+section.home header h6 {
+  color: rgb(240, 240, 240);
+}
+section.home header h1,
+section.home header h2,
+section.home header h3,
+section.home header h4,
+section.home header h5,
+section.home header h6 {
+  color: rgb(240, 240, 240);
+  font-family: "Roboto Condensed", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+/* Post */
+
+body.post-template>main {
+  background: rgb(255, 255, 255);
+}
+
+header.post-header {
+  margin-bottom: 30px;
+  text-align: center;
+  background: rgba(0, 175, 88, 0.8);
+  padding: 1.6em;
+}
+header.post-header h1,
+header.post-header p,
+header.post-header time {
+  color: rgb(255, 255, 255);
+}
+header.post-header h1 {
+  font-family: "Roboto Condensed", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.post.container {
+  width: 900px;
+}
+
+figure.post-header-image {
+  background-size: cover;
+  background-position: center;
+  height: 45vh;
+  width: 100vw;
+}
+@media screen and (max-width: 960px) {
+  figure.post-header-image {
+    height: 30vh;
+  }
+}

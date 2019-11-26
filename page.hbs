@@ -1,26 +1,21 @@
 {{!< default}}
 {{!-- inject everything in this file into the {body} of default.hbs --}}
 
-{{!-- pull data from the page --}}
+{{!-- pull data from the post --}}
 {{#post}}
 <article class="{{post_class}}">
-
   <header class="post-header">
-    
     <h1 class="post-title">{{title}}</h1>
-    
     <section class="post-meta">
       <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
         {{date format="DD MMMM YYYY"}}
       </time>
       {{tags prefix=" on "}}
     </section>
-
   </header>
 
   <section class="post-content">
     {{content}}
   </section>
-  
 </article>
 {{/post}}

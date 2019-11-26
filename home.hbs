@@ -16,13 +16,62 @@
   {{/if}}
 </header>
 
-<div class="container">
-  <h2>About</h2>
-  <p>Lorem ipsum...</p>
+{{#get "pages" slug="about" as |page|}}
+  {{#if page}}
+    {{#page}}
+      <section class="about">
+        <div class="container">
+          {{content}}
+        </div>
+      </section>
+    {{/page}}
+  {{/if}}
+{{/get}}
 
-  <h2>Blog</h2>
-  <div class="card-group posts">
-    {{#get "posts" limit="5"}}
+{{#get "pages" slug="who" as |page|}}
+  {{#if page}}
+    {{#page}}
+      <section class="who">
+        <div class="container">
+          {{content}}
+        </div>
+      </section>
+    {{/page}}
+  {{/if}}
+{{/get}}
+
+{{#get "pages" slug="what" as |page|}}
+  {{#if page}}
+    {{#page}}
+      <section class="what">
+        <div class="container">
+          {{content}}
+        </div>
+      </section>
+    {{/page}}
+  {{/if}}
+{{/get}}
+
+{{#get "pages" slug="when" as |page|}}
+  {{#if page}}
+    {{#page}}
+      <section class="when">
+        <div class="container">
+          {{content}}
+        </div>
+      </section>
+    {{/page}}
+  {{/if}}
+{{/get}}
+
+<section class="home">
+  <header>
+    <div class="container">
+      <h2>Latest Posts</h2>
+    </div>
+  </header>
+  <div class="container card-group posts">
+    {{#get "posts" limit="5" filter="tags:-routes" include="tags,authors"}}
       {{#foreach posts}}
         {{#if @first}}
           {{> "post-card" large=true}}
@@ -32,17 +81,25 @@
       {{/foreach}}
     {{/get}}
   </div>
+</section>
 
-  <h2>Routes</h2>
-  <div class="card-group posts">
-    {{#get "posts" limit="5"}}
-      {{#foreach posts}}
-        {{#if @first}}
-          {{> "post-card" large=true}}
-        {{else}}
-          {{> "post-card"}}
-        {{/if}}
-      {{/foreach}}
-    {{/get}}
-  </div>
-</div>
+{{#get "posts" limit="5" filter="tags:routes" }}
+  {{#if posts}}
+    <section class="home">
+      <header>
+        <div class="container">
+          <h2>Favorite Routes</h2>
+        </div>
+      </header>
+      <div class="container card-group posts">
+        {{#foreach posts}}
+          {{#if @first}}
+            {{> "route-card" large=true}}
+          {{else}}
+            {{> "route-card"}}
+          {{/if}}
+        {{/foreach}}
+      </div>
+    </section>
+  {{/if}}
+{{/get}}
