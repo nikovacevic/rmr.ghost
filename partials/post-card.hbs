@@ -4,8 +4,18 @@
   {{/if}}
   <div class="card-content">
     <h4 class="title">{{title}}</h4>
-    <p class="author">{{author}}</p>
     <p class="date">{{date format="MMMM D, YYYY"}}</p>
   </div>
-  <div class="card-footer"></div>
+  <div class="card-footer">
+    {{#if authors}}
+      {{#foreach authors}}
+        <p class="authors">
+          {{#if profile_image}}
+            <img class="profile" src="{{profile_image}}" />
+          {{/if}}
+          <span class="name">{{name}}</span>
+        </p>
+      {{/foreach}}
+    {{/if}}
+  </div>
 </a>

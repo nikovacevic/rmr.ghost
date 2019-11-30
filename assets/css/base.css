@@ -267,6 +267,18 @@ body>footer a:active {
   padding: 1.2em 1.6em 0 1.6em;
 }
 
+.card .card-footer p.authors {
+  display: flex;
+  margin-bottom: 0.2em;
+}
+.card .card-footer p.authors img.profile {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin: 0 6px 0 0;
+  padding: 0;
+}
+
 .card .card-footer {
   flex: 0 0 auto;
   max-width: 100%;
