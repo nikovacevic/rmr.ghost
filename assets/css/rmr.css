@@ -57,6 +57,7 @@ header.post-header {
   text-align: center;
   background: rgba(0, 175, 88, 0.8);
   padding: 1.6em;
+  box-shadow: inset 0px -6px 8px rgba(0, 0, 0, 0.1)
 }
 header.post-header h1,
 header.post-header p,
@@ -66,6 +67,26 @@ header.post-header time {
 header.post-header h1 {
   font-family: "Roboto Condensed", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+section.post-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  color: rgba(255, 255, 255, 1.0);
+}
+section.post-author img.profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  margin: 0.5em;
+}
+section.post-author a {
+  color: rgb(255, 255, 255);
+  box-shadow: none;
+}
+
 .post.container {
   width: 900px;
 }
