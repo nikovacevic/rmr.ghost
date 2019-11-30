@@ -70,6 +70,10 @@ ul>li,ol>li {
   margin: 0 0 0.6em 0;
 }
 
+em {
+  font-style: italic;
+}
+
 button {
   background: none;
   border-color: transparent;

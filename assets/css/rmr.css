@@ -10,9 +10,6 @@ section.about p {
   margin: 0 auto;
   max-width: 600px;
 }
-section.about p:last-child {
-  margin-bottom: 0;
-}
 
 /* Home */
 
