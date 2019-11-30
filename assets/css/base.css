@@ -108,7 +108,7 @@ body>header {
   display: flex;
   flex: 0 0 auto;
   flex-flow: row;
-  padding: 1.2em 1.6em;
+  padding: 1.2em 1.0em;
   position: fixed;
   width: 100%;
 }
@@ -116,13 +116,14 @@ body>header {
 body>header a#site-title {
   font-family: "Roboto Condensed", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
+  font-size: 1.2em;
   text-transform: uppercase;
   color: rgb(16, 16, 16);
   text-decoration: none;
   transition: all 0.1s ease-in;
-  line-height: 2em;
+  line-height: 1.8em;
   box-shadow: none;
-  padding: 0 0.5em;
+  padding: 0.2em 0.5em 0 0.5em;
 }
 
 body>header a#site-title:hover {
