@@ -83,6 +83,10 @@ section.post-author a {
   box-shadow: none;
 }
 
+section.post-content iframe.instagram-media {
+  margin: 0 auto !important;
+}
+
 .post.container {
   width: 900px;
 }
