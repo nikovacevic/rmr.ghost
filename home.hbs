@@ -45,25 +45,7 @@
       {{/foreach}}
     {{/get}}
   </div>
+  <div class="container align-center" style="padding: 2em;">
+    <a href="/blog/" class="button large">More blog posts &#x27A1;</a>
+  </div>
 </section>
-
-{{#get "posts" limit="5" filter="tags:routes" }}
-  {{#if posts}}
-    <section class="home">
-      <header>
-        <div class="container">
-          <h2>Favorite Routes</h2>
-        </div>
-      </header>
-      <div class="container card-group posts">
-        {{#foreach posts}}
-          {{#if @first}}
-            {{> "route-card" large=true}}
-          {{else}}
-            {{> "route-card"}}
-          {{/if}}
-        {{/foreach}}
-      </div>
-    </section>
-  {{/if}}
-{{/get}}

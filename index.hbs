@@ -1,8 +1,18 @@
 {{!< default}}
 {{!-- inject everything in this file into the {body} of default.hbs --}}
 
-<div class="posts">
-  {{#foreach posts}}
-    {{> "post-card"}}
-  {{/foreach}}
-</div>
+<section class="blog">
+  <div class="container card-group posts">
+    {{#foreach posts}}
+      {{#if @first}}
+        {{> "post-card" large=true}}
+      {{else}}
+        {{> "post-card"}}
+      {{/if}}
+    {{/foreach}}
+
+    <div class="card" style="display: flex; flex-direction: column; justify-content: center; padding: 1em;">
+      {{pagination}}
+    </div>
+  </div>
+</section>
