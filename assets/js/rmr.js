@@ -1,30 +1,43 @@
 (function(window, document) {
 
   var mainNav = document.querySelector('#main-nav');
-  var mainNavToggles = document.querySelectorAll('.toggle-main-nav');
+  var mainNavOpeners = document.querySelectorAll('.open-main-nav');
+  var mainNavClosers = document.querySelectorAll('.close-main-nav');
 
-  mainNavToggles.forEach(function (element) {
+  mainNavOpeners.forEach(function (element) {
     element.addEventListener('click', function() {
       toggleClass(mainNav, 'open');
     });
   });
 
-  document.addEventListener('click', function(e) {
+  // If the event occurs outside the main nav and the element is not an
+  // open button, close the nav. If the event occurs inside the main nav
+  // and the element is not a close button, open the nav.
+  var toggleMainNav = function(e) {
     var closeMenu = true;
 
     for (var el of e.path) {
       if (el.id && el.id === 'main-nav') {
         closeMenu = false;
       }
-      if (el.className && el.className.indexOf('toggle-main-nav') > -1) {
+      if (el.className && el.className.indexOf('open-main-nav') > -1) {
         closeMenu = false;
+        break;
+      }
+      if (el.className && el.className.indexOf('close-main-nav') > -1) {
+        closeMenu = true;
+        break;
       }
     }
 
     if (closeMenu) {
       removeClass(mainNav, 'open');
+    } else {
+      addClass(mainNav, 'open');
     }
-  });
+  }
+  document.addEventListener('click', toggleMainNav);
+  document.addEventListener('touchend', toggleMainNav);
 
   function toggleClass(element, className) {
     if (hasClass(element, className)) {

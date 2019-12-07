@@ -147,12 +147,13 @@ nav#main-nav {
   color: rgb(32, 32, 32);
   display: flex;
   flex: 0 0 auto;
-  flex-flow: row;
+  flex-flow: column;
   height: 100%;
   position: fixed;
   right: -360px;
   transition: all 0.2s;
   width: 360px;
+  font-family: "Roboto Condensed", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 nav#main-nav.open {
@@ -173,7 +174,7 @@ nav#main-nav.open {
 }
 
 nav#main-nav ul {
-  margin: 2em 0;
+  margin: 0;
   padding: 0;
   width: 100%;
 }
@@ -336,4 +337,10 @@ body>footer a:active {
 
 .align-center {
   text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
 }

@@ -4,8 +4,11 @@
   <nav id="bar-nav" role="menu">
     {{navigation}}
   </nav>
-  <button class="toggle-main-nav"><i class="fas fa-bars fa-lg"></i></button>
+  <button class="open-main-nav toggle-main-nav"><i class="fas fa-bars fa-lg"></i></button>
 </header>
 <nav id="main-nav" role="menu">
+  <div class="align-right" style="padding: 1.2em 1.0em;">
+    <button class="close-main-nav toggle-main-nav"><i class="fas fa-times fa-lg"></i></button>
+  </div>
   {{navigation}}
 </nav>
