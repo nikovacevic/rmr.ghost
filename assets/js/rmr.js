@@ -6,7 +6,13 @@
 
   mainNavOpeners.forEach(function (element) {
     element.addEventListener('click', function() {
-      toggleClass(mainNav, 'open');
+      addClass(mainNav, 'open');
+    });
+  });
+
+  mainNavClosers.forEach(function (element) {
+    element.addEventListener('click', function() {
+      removeClass(mainNav, 'open');
     });
   });
 
@@ -38,14 +44,6 @@
   }
   document.addEventListener('click', toggleMainNav);
   document.addEventListener('touchend', toggleMainNav);
-
-  function toggleClass(element, className) {
-    if (hasClass(element, className)) {
-      removeClass(element, className);
-    } else {
-      addClass(element, className);
-    }
-  }
 
   // https://stackoverflow.com/questions/6787383/how-to-add-remove-a-class-in-javascript
   function hasClass(element, className) {
