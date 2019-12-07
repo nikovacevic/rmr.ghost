@@ -100,14 +100,20 @@ button:hover {
   border-color: transparent;
 }
 
-button.toggle-main-nav {
+button.no-outline,
+a.button.no-outline {
+  border-color: transparent;
   box-shadow: none;
   color: rgb(64, 64, 64);
-  padding: 0.4em 0.4em 0.2em 0.4em;
+  padding: 0.4em;
 }
-button.toggle-main-nav:hover {
+button.no-outline:hover,
+a.button.no-outline:hover {
+  background: rgb(240, 240, 240);
+  border-color: transparent;
+  box-shadow: none;
   color: rgb(64, 64, 64);
-  padding: 0.4em 0.4em 0.2em 0.4em;
+  padding: 0.4em;
 }
 
 /* Structures */

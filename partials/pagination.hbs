@@ -1,13 +1,13 @@
 <nav class="pagination" role="navigation">
     {{#if prev}}
-      <a class="button newer-posts" href="{{page_url prev}}">&#x2B05;</a>
+      <a class="button newer-posts no-outline" href="{{page_url prev}}"><i class="fas fa-angle-left"></i></a>
     {{else}}
-      <a class="button newer-posts" href="/">&#x2B05;</a>
+      <a class="button newer-posts no-outline" href="/"><i class="fas fa-angle-left"></i></a>
     {{/if}}
     <h4 class="page-number" style="margin: auto">Page {{page}} of {{pages}}</h4>
     {{#if next}}
-      <a class="button older-posts" href="{{page_url next}}">&#x27A1;</a>
+      <a class="button older-posts no-outline" href="{{page_url next}}"><i class="fas fa-angle-right"></i></a>
     {{else}}
-      <a class="button newer-posts">&#x27A1;</a>
+      <a class="button newer-posts no-outline"><i class="fas fa-angle-right"></i></a>
     {{/if}}
 </nav>
