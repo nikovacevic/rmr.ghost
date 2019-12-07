@@ -1,10 +1,11 @@
 <header>
   <a id="site-title" href="/">{{@site.title}}</a>
   <div class="flex-grow"></div>
+  <nav id="bar-nav" role="menu">
+    {{navigation}}
+  </nav>
   <button class="toggle-main-nav"><i class="fas fa-bars fa-lg"></i></button>
 </header>
 <nav id="main-nav" role="menu">
-  {{#if @blog.navigation}}
-    {{navigation}}
-  {{/if}}
+  {{navigation}}
 </nav>
