@@ -91,6 +91,21 @@ section.post-content iframe.instagram-media {
   width: 900px;
 }
 
+strong {
+  font-weight: 700;
+}
+
+.post-content h1 {
+  font-size: 2.0em;
+}
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  font-size: 1.6em;
+}
+
 figure.post-header-image {
   background-size: cover;
   background-position: center;
