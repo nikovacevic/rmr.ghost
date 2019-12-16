@@ -284,6 +284,13 @@ body>footer a:active {
 .card.card-large {
   flex: 2 1 500px;
 }
+.card.card-small {
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+.card.card-small .title {
+  margin-top: 0;
+}
 
 .card .card-content {
   flex: 1 0 auto;
