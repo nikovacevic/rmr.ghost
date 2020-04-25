@@ -1,5 +1,71 @@
 @import url('./base.css');
 
+/* Clean up: was in the Ghost code injector */
+
+/* use condensed font for the headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* space out cards a bit more? */
+.card {
+  margin: 0.8em;
+}
+
+/* small card */
+.card.card-small {
+  flex: 1 1 150px;
+}
+.card.card-small .card-content {
+  padding: 1.0em 1.2em;
+}
+.card.card-small .card-content .primary {
+  font-size: 1.2em;
+  margin: 0.4em 0;
+}
+.card.card-small .card-content .secondary {
+  line-height: 1.2;
+}
+
+/* make the title bar bigger on bigger screens */
+@media screen and (min-width: 700px) {
+  body>header a#site-title {
+    font-size: 1.4em;
+  }
+
+  body>main {
+    padding-top: 82px;
+  }
+
+  button.toggle-main-nav,
+  button.toggle-main-nav:hover{
+    font-size: 1.0em;
+    padding: 0.6em 0.8em 0.4em 0.8em;
+  }
+}
+
+/* fix image size and position in posts and pages */
+.container img {
+  padding: 0;
+  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.2);
+}
+img.profile {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.container figure {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.container figure img {
+  text-align: center;
+  margin-bottom: 1em;
+  max-height: 480px;
+}
+figcaption {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
 section.about {
   text-align: center;
 }
