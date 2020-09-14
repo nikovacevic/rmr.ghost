@@ -2,7 +2,10 @@
 ![RMR theme in action](https://github.com/nikovacevic/rmr.ghost/blob/master/assets/images/screenshot.png)
 
 ## Gettings started
-Getting up-and-running with the 
+Getting up-and-running with the RMR website requires the following:
+- Node.js and npm
+- Ghost CLI to run Ghost locally
+- This theme
 
 ### Install Node.js and npm
 https://nodejs.org/en/download/
