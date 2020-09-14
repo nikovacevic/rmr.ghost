@@ -1,4 +1,5 @@
 # RMR Ghost theme
+![RMR theme in action](https://github.com/nikovacevic/rmr.ghost/blob/master/assets/images/screenshot.png)
 
 ## Gettings started
 Getting up-and-running with the 
