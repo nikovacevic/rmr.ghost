@@ -5,7 +5,7 @@
 Getting up-and-running with the RMR website requires the following:
 - Node.js and npm
 - Ghost CLI to run Ghost locally
-- This theme
+- This theme, cloned into your Ghost installation's `/content/themes` directory
 
 ### Install Node.js and npm
 https://nodejs.org/en/download/
@@ -52,4 +52,8 @@ Resolving deltas: 100% (88/88), done.
 ```
 
 ### Loading content
-Optionally, you can delete the default starter posts and upload the RMR blog content. This will require two things: a JSON file of exported posts, users, etc; a backup of the `/content/images` directory for images.
+You will probably want to delete the default posts and upload the RMR blog content. Here's how to do that:
+- Go to [Settings > Labs](http://localhost:2368/ghost/#/settings/labs) and Import a JSON backup of the real RMR blog data.
+- Go to [Settings > Labs](http://localhost:2368/ghost/#/settings/labs) and upload the [routes.yaml](https://github.com/nikovacevic/rmr.ghost/blob/master/assets/config/routes.yaml) file in the assets  directory
+- Go to [Settings > General](http://localhost:2368/ghost/#/settings/general) and select the publication icon, logo, and cover from the [/assets/images directory](https://github.com/nikovacevic/rmr.ghost/tree/master/assets/images).
+- Acquire a tarball of the images directory and unzip it into your `/content/images` directory.
